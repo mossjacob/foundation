@@ -1,10 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from typing import List, Optional, Dict, Any
-import numpy as np
-from datetime import datetime
-import random
 from monte_carlo import MonteCarloSimulation, UserInput, SimulationResult
 
 app = FastAPI()
