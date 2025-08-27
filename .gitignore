@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 .vercel
 
-api/__pycache__/
+__pycache__/

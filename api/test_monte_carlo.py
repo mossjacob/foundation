@@ -1,4 +1,4 @@
-from monte_carlo import MonteCarloSimulation, UserInput, DecisionType
+from api.lib.monte_carlo import MonteCarloSimulation, UserInput, DecisionType
 import numpy as np
 
 def test_monte_carlo_initialization():
@@ -163,7 +163,7 @@ def test_decision_probabilities():
     mc = MonteCarloSimulation(user_input)
     
     # Create a test state
-    from monte_carlo import FinancialState
+    from api.lib.monte_carlo import FinancialState
     test_state = FinancialState(
         year=0,
         age=30,

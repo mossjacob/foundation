@@ -1,16 +1,17 @@
 [project]
-name = "backend"
+name = "foundation"
 version = "0.1.0"
-description = "Add your description here"
+description = "Personal Finance Monte Carlo Simulator"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.9"
 dependencies = [
-    "fastapi==0.115.0",
-    "numpy==1.26.4",
-    "pandas==2.2.0",
+    "flask==3.1.0",
+    "flask-cors==5.0.0",
     "pydantic==2.10.0",
-    "python-multipart==0.0.12",
-    "requests>=2.32.5",
-    "scipy==1.14.0",
-    "uvicorn==0.34.0",
+    "numpy==1.26.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "requests==2.32.5",
 ]
