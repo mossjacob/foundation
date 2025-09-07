@@ -63,7 +63,7 @@ export default function FinancialInputForm({ onSimulationComplete, isLoading, se
         current_isa_balance: data.current_isa_balance || 0,
       }
 
-      const apiUrl = import.meta.env.PROD ? "/api/simulate" : "http://localhost:8000/simulate"
+      const apiUrl = import.meta.env.PROD ? "/api/simulate" : "http://localhost:8000/api/simulate"
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: {

@@ -260,6 +260,113 @@ export default function SimulationResults({ data, onNewSimulation }: Props) {
           </CardContent>
         </Card>
       )}
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Simulation Details: Events & Assumptions</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="text-lg font-semibold mb-3">Financial Decisions Modeled</h4>
+              <div className="grid gap-4">
+                <div className="p-4 bg-blue-50 rounded-lg">
+                  <h5 className="font-semibold text-blue-900">Having Children</h5>
+                  <p className="text-sm text-gray-700 mt-1">15% chance if age &lt; 45 and children &lt; 3</p>
+                  <p className="text-sm text-gray-600">Adds £12,000/year in expenses per child</p>
+                </div>
+                <div className="p-4 bg-green-50 rounded-lg">
+                  <h5 className="font-semibold text-green-900">Buying Property</h5>
+                  <p className="text-sm text-gray-700 mt-1">25% chance if no property and cash &gt; £30,000</p>
+                  <p className="text-sm text-gray-600">Average price £300,000 (±£50k), 20% deposit required</p>
+                </div>
+                <div className="p-4 bg-purple-50 rounded-lg">
+                  <h5 className="font-semibold text-purple-900">Getting Pay Rise</h5>
+                  <p className="text-sm text-gray-700 mt-1">20% chance every 2 years</p>
+                  <p className="text-sm text-gray-600">Average 5% increase (±2%)</p>
+                </div>
+                <div className="p-4 bg-orange-50 rounded-lg">
+                  <h5 className="font-semibold text-orange-900">ISA Contributions</h5>
+                  <p className="text-sm text-gray-700 mt-1">40% chance if cash &gt; £2,000</p>
+                  <p className="text-sm text-gray-600">Up to £20,000/year, 50-100% of available amount</p>
+                </div>
+                <div className="p-4 bg-red-50 rounded-lg">
+                  <h5 className="font-semibold text-red-900">Taking Mortgage</h5>
+                  <p className="text-sm text-gray-700 mt-1">10% chance if own property with no mortgage</p>
+                  <p className="text-sm text-gray-600">Max 4.5× income or 80% of cash</p>
+                </div>
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <h5 className="font-semibold text-gray-900">Do Nothing</h5>
+                  <p className="text-sm text-gray-700 mt-1">20% base probability each year</p>
+                  <p className="text-sm text-gray-600">No major financial decisions made</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-3">Economic Assumptions</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h5 className="font-medium mb-2">Annual Growth Rates</h5>
+                  <ul className="space-y-1 text-sm text-gray-700">
+                    <li>• Inflation: 2.5% ±1%</li>
+                    <li>• Income Growth: 3% ±2%</li>
+                    <li>• Property Growth: 4% ±3%</li>
+                    <li>• ISA Returns: 7% ±5%</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-medium mb-2">Fixed Parameters</h5>
+                  <ul className="space-y-1 text-sm text-gray-700">
+                    <li>• Property Deposit: 20%</li>
+                    <li>• Mortgage Rate: 5%/year</li>
+                    <li>• Base Living Costs: 60% of income</li>
+                    <li>• Max Children: 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-3">Wealth Calculation</h4>
+              <div className="p-4 bg-gray-100 rounded-lg">
+                <code className="text-sm">
+                  Total Wealth = Cash + Property Value + ISA Balance - Mortgage Debt
+                </code>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-3">What's Not Modeled</h4>
+              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                <ul className="space-y-1">
+                  <li>• Unemployment or career breaks</li>
+                  <li>• Market crashes or recessions</li>
+                  <li>• Pension contributions</li>
+                  <li>• Healthcare costs</li>
+                  <li>• Relationship changes</li>
+                </ul>
+                <ul className="space-y-1">
+                  <li>• Inheritance or windfalls</li>
+                  <li>• Student loan repayments</li>
+                  <li>• Other investments beyond ISAs</li>
+                  <li>• Emergency fund strategies</li>
+                  <li>• Behavioral spending patterns</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+              <h5 className="font-semibold text-yellow-900 mb-2">Important Note</h5>
+              <p className="text-sm text-yellow-800">
+                This simulation provides illustrative scenarios based on probabilistic modeling. 
+                Real financial outcomes depend on many factors not captured in this model. 
+                Always consult with qualified financial advisors for personal financial planning.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   )
 }
