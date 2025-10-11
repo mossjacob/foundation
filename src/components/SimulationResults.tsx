@@ -199,8 +199,10 @@ export default function SimulationResults({ data, onNewSimulation }: Props) {
           </p>
         </CardHeader>
         <CardContent>
-          <div className="h-96 w-full">
-            <Line data={chartData} options={chartOptions} />
+          <div className="h-96 w-full overflow-x-auto">
+            <div className="min-w-[800px] h-96">
+              <Line data={chartData} options={chartOptions} />
+            </div>
           </div>
         </CardContent>
       </Card>
